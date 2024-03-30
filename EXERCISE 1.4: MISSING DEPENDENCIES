@@ -1,0 +1,29 @@
+docker run -it --name ubuntu-container ubuntu
+root@b82ebeffb9df:/# apt update
+root@b82ebeffb9df:/# apt install curl -y
+root@b82ebeffb9df:/# sh -c 'echo "Input website:" ; read website; echo "searching..."; sleep 1; curl -L http://$website;'
+Input website:
+helsinki.fi
+searching...
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+<head>
+  <script type="text/javascript" data-cookieconsent="ignore">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500
+    });
+    gtag("set", "ads_data_redaction", true);
+    gtag("set", "url_passthrough", true);
+  </script>
